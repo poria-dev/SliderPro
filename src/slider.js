@@ -7,13 +7,17 @@ const list = document.querySelectorAll("ul > li")
 
 let x = null
 
-let stopp
+let stopp;
+
+let lamp = false
 
 
 
 imgs.forEach((val) => {
 
     x = Number(val.getAttribute("data-status"))
+    val.style.filter = "blur(1.5px)"
+
 
     swi(val, x)
 
@@ -24,11 +28,23 @@ active()
 runner_auto()
 
 
-
 btnright.addEventListener("click", () => {
+
+    if (lamp == true) {
+
+        return
+
+    }
 
     clickright()
     active()
+    lamp = true
+
+    setTimeout(() => {
+        lamp = false
+    }, 500);
+    // console.log(lamp);
+
 
 })
 
@@ -67,6 +83,15 @@ btnleft.addEventListener("mouseleave", () => {
 btnleft.addEventListener("click", () => {
 
 
+    if (lamp == true) {
+
+        return
+
+    }
+
+    lamp = true
+
+
     imgs.forEach((val) => {
 
         x = Number(val.getAttribute("data-status"))
@@ -91,6 +116,10 @@ btnleft.addEventListener("click", () => {
     })
 
     active()
+
+    setTimeout(() => {
+        lamp = false
+    }, 500);
 
 })
 
@@ -170,6 +199,22 @@ function swi(val, x) {
 
     }
 
+    if (x == 3) {
+
+        val.style.filter = "blur(0px)"
+
+
+
+    } else if (x == 2 || x == 4) {
+        val.style.filter = "blur(0.5px)"
+
+    } else if (x == 1 || x == 5) {
+        val.style.filter = "blur(1.5px)"
+    } else {
+        val.style.filter = "blur(2.5px)"
+
+    }
+
 }
 
 
@@ -186,7 +231,9 @@ function clickright() {
 
         } else {
 
+
             x = 0
+
 
         }
 
@@ -243,4 +290,7 @@ function runner_auto() {
     }, 3000)
 
 }
+
+
+
 
