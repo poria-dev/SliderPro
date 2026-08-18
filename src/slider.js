@@ -1,0 +1,245 @@
+const imgs = document.querySelectorAll(".boxorg>figure")
+const btnright = document.querySelector(".btnright")
+const btnleft = document.querySelector(".btnleft")
+
+const list = document.querySelectorAll("ul > li")
+
+
+let x = null
+
+let stopp
+
+
+
+imgs.forEach((val) => {
+
+    x = Number(val.getAttribute("data-status"))
+
+    swi(val, x)
+
+})
+
+
+active()
+runner_auto()
+
+
+
+btnright.addEventListener("click", () => {
+
+    clickright()
+    active()
+
+})
+
+
+btnright.addEventListener("mousemove", () => {
+
+    clearInterval(stopp)
+
+})
+
+
+btnright.addEventListener("mouseleave", () => {
+
+    runner_auto()
+
+})
+
+
+// //////////////////////////////////////////////////////////////////////////
+
+
+btnleft.addEventListener("mousemove", () => {
+
+    clearInterval(stopp)
+
+})
+
+
+btnleft.addEventListener("mouseleave", () => {
+
+    runner_auto()
+
+})
+
+
+btnleft.addEventListener("click", () => {
+
+
+    imgs.forEach((val) => {
+
+        x = Number(val.getAttribute("data-status"))
+
+
+        if (x > 0) {
+
+            x--
+
+        } else {
+
+            x = 6
+
+        }
+
+
+        val.setAttribute("data-status", x)
+
+
+        swi(val, x)
+
+    })
+
+    active()
+
+})
+
+
+// conditions //////////////////////////////////
+
+function swi(val, x) {
+
+
+    val.classList.remove("center")
+    val.classList.remove("left1")
+    val.classList.remove("left2")
+    val.classList.remove("right1")
+    val.classList.remove("right2")
+    val.classList.remove("out1")
+    val.classList.remove("out2")
+
+
+
+    switch (x) {
+
+
+        case 0:
+
+            val.classList.add("out1")
+
+            break
+
+
+
+        case 1:
+
+            val.classList.add("left1")
+
+            break
+
+
+
+        case 2:
+
+            val.classList.add("left2")
+
+            break
+
+
+
+        case 3:
+
+            val.classList.add("center")
+
+            break
+
+
+
+        case 4:
+
+            val.classList.add("right1")
+
+            break
+
+
+
+        case 5:
+
+            val.classList.add("right2")
+
+            break
+
+
+
+        case 6:
+
+            val.classList.add("out2")
+
+            break
+
+
+    }
+
+}
+
+
+function clickright() {
+
+    imgs.forEach((val) => {
+
+        x = Number(val.getAttribute("data-status"))
+
+
+        if (x < 6) {
+
+            x++
+
+        } else {
+
+            x = 0
+
+        }
+
+
+        val.setAttribute("data-status", x)
+
+
+        swi(val, x)
+
+    })
+
+}
+
+
+// list /////////////
+
+function active() {
+
+    list.forEach((val) => {
+
+        val.classList.remove("wh")
+        val.classList.add("bg-gray-500")
+
+    })
+
+
+    imgs.forEach((item, i) => {
+
+        let x = Number(item.getAttribute("data-status"))
+
+
+        if (x == 3) {
+
+            list[i].classList.add("wh")
+            list[i].classList.remove("bg-gray-500")
+
+        }
+
+    })
+
+}
+
+
+// for auto run list
+
+function runner_auto() {
+
+    clearInterval(stopp)
+
+    stopp = setInterval(() => {
+
+        btnright.click()
+
+    }, 3000)
+
+}
