@@ -4,128 +4,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider</title>
+    <title>3D Slider :) </title>
     <link rel="stylesheet" href="output.css">
 </head>
 
 <body class="overflow-x-hidden bg-[#050505] text-white select-none">
 
-        <section class="sec w-full min-h-[650px] my-[100px] mx-auto flex flex-wrap items-center relative
-            bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.045),transparent_38%),radial-gradient(circle_at_50%_0%,rgba(255,69,0,0.035),transparent_30%),#050505]">
+    <section class="sec w-full min-h-[650px] my-[100px] mx-auto flex flex-wrap items-center relative bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.045),transparent_38%),radial-gradient(circle_at_50%_0%,rgba(255,69,0,0.035),transparent_30%),#050505]">
 
-            <div class="absolute inset-0 pointer-events-none
-              bg-[linear-gradient(120deg,rgba(255,255,255,0.015)_0%,transparent_35%,transparent_65%,rgba(255,255,255,0.012)_100%)]">
+        <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(120deg,rgba(255,255,255,0.015)_0%,transparent_35%,transparent_65%,rgba(255,255,255,0.012)_100%)]"></div>
+
+        <div class="absolute w-[55%] h-[25%] left-[22.5%] top-[38%] rounded-full pointer-events-none bg-[radial-gradient(ellipse,rgba(255,255,255,0.035),transparent_70%)] blur-[70px]"></div>
+
+        <div class="w-[10%] h-full shrink-0 flex justify-center items-center max-md:w-[12%] max-sm:w-[14%]">
+
+            <button class="btnleft group w-[70%] max-w-[80px] p-4 rounded-2xl cursor-pointer flex justify-center items-center text-white/70 bg-white/[0.04] border border-white/10 backdrop-blur-xl shadow-[0_20px_45px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:text-white hover:bg-white/[0.09] hover:border-white/20 hover:-translate-x-1 active:scale-95 max-md:w-[75%] max-md:p-3 max-sm:w-full max-sm:p-2 max-sm:rounded-xl" type="button">
+
+                <svg class="w-[52px] h-[52px] transition-transform duration-300 group-hover:-translate-x-1 max-md:w-[38px] max-md:h-[38px] max-sm:w-[27px] max-sm:h-[27px]" viewBox="0 0 32 32" fill="none">
+                    <path d="M28 16H6" stroke="currentColor" stroke-width="2"/>
+                    <path d="M14 7L5 16L14 25" stroke="currentColor" stroke-width="2"/>
+                    <path d="M9 7L4 12" stroke="currentColor" stroke-width="1" opacity=".35"/>
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <div class="boxorg w-[80%] h-[650px] shrink-0 relative [perspective:1000px] isolate max-md:w-[76%] max-md:h-[520px] max-sm:w-[72%] max-sm:h-[430px]">
+
+            <div class="absolute w-[70%] h-[55%] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none -z-10 bg-[radial-gradient(ellipse,rgba(255,69,0,0.16),rgba(255,69,0,0.04)_45%,transparent_72%)] blur-[45px]"></div>
+
+
+            <figure data-status="0" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
+
+                <img class="absolute inset-0 w-full h-full object-cover" src="img/thor-ragnarok.jpg" alt="Thor Ragnarok">
+
+                <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
+
+                    <h2 class="text-xl font-bold text-white max-sm:text-sm">
+                        Thor: Ragnarok
+                    </h2>
+
+                    <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">
+                        Thor must stop Ragnarok and face a powerful new enemy.
+                    </p>
+
+                </div>
+
+            </figure>
+
+
+            <figure data-status="1" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
+
+                <img class="absolute inset-0 w-full h-full object-cover" src="img/eternals.jpg" alt="Eternals">
+
+                <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
+
+                    <h2 class="text-xl font-bold text-white max-sm:text-sm">
+                        Eternals
+                    </h2>
+
+                    <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">
+                        Ancient cosmic heroes return to protect humanity.
+                    </p>
+
+                </div>
+
+            </figure>
+
+
+            <figure data-status="2" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
+
+                <img class="absolute inset-0 w-full h-full object-cover" src="img/guardians-of-the-galaxy.jpg" alt="Guardians of the Galaxy">
+
+                <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
+
+                    <h2 class="text-xl font-bold text-white max-sm:text-sm">
+                        Guardians of the Galaxy
+                    </h2>
+
+                    <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">
+                        A group of unlikely heroes joins forces across the galaxy.
+                    </p>
+
+                </div>
+
+            </figure>
+
+
+            <figure data-status="3" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_45px_90px_rgba(0,0,0,0.7),0_20px_45px_rgba(0,0,0,0.45),0_0_55px_rgba(255,69,0,0.08)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
+
+                <img class="absolute inset-0 w-full h-full object-cover" src="img/justice-league.jpg" alt="Justice League">
+
+                <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
+
+                    <h2 class="text-xl font-bold text-white max-sm:text-sm">
+                        Justice League
+                    </h2>
+
+                    <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">
+                        Earth's greatest heroes unite against an unstoppable threat.
+                    </p>
+
+                </div>
+
+            </figure>
+
+
+            <figure data-status="4" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
+
+                <img class="absolute inset-0 w-full h-full object-cover" src="img/spider-man.jpg" alt="Spider-Man">
+
+                <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
+
+                    <h2 class="text-xl font-bold text-white max-sm:text-sm">
+                        Spider-Man
+                    </h2>
+
+                    <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">
+                        A young hero learns what it truly means to be responsible.
+                    </p>
+
+                </div>
+
+            </figure>
+
+
+            <figure data-status="5" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
+
+                <img class="absolute inset-0 w-full h-full object-cover" src="img/dr-strange.jpg" alt="Doctor Strange">
+
+                <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
+
+                    <h2 class="text-xl font-bold text-white max-sm:text-sm">
+                        Doctor Strange
+                    </h2>
+
+                    <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">
+                        A brilliant surgeon enters a world of magic and mysticism.
+                    </p>
+
+                </div>
+
+            </figure>
+
+
+            <figure data-status="6" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
+
+                <img class="absolute inset-0 w-full h-full object-cover" src="img/suicide-squad.jpg" alt="Suicide Squad">
+
+                <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
+
+                    <h2 class="text-xl font-bold text-white max-sm:text-sm">
+                        Suicide Squad
+                    </h2>
+
+                    <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">
+                        A team of dangerous criminals is sent on an impossible mission.
+                    </p>
+
+                </div>
+
+            </figure>
+
+        </div>
+
+
+        <div class="w-[10%] h-full shrink-0 flex justify-center items-center max-md:w-[12%] max-sm:w-[14%]">
+
+            <button class="btnright group w-[70%] max-w-[80px] p-4 rounded-2xl cursor-pointer flex justify-center items-center text-white/70 bg-white/[0.04] border border-white/10 backdrop-blur-xl shadow-[0_20px_45px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:text-white hover:bg-white/[0.09] hover:border-white/20 hover:translate-x-1 active:scale-95 max-md:w-[75%] max-md:p-3 max-sm:w-full max-sm:p-2 max-sm:rounded-xl" type="button">
+
+                <svg class="w-[52px] h-[52px] transition-transform duration-300 group-hover:translate-x-1 max-md:w-[38px] max-md:h-[38px] max-sm:w-[27px] max-sm:h-[27px]" viewBox="0 0 32 32" fill="none">
+                    <path d="M4 16H26" stroke="currentColor" stroke-width="2"/>
+                    <path d="M18 7L27 16L18 25" stroke="currentColor" stroke-width="2"/>
+                    <path d="M23 7L28 12" stroke="currentColor" stroke-width="1" opacity=".35"/>
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <ul class="w-full h-25 *:rounded-full flex justify-center items-center gap-2.5 *:bg-gray-500 *:w-5 *:h-5">
+
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+
+    </section>
+
+<footer class="w-full bg-[#050505]/85 backdrop-blur-xl text-white border-t border-white/10">
+
+    <div class="w-[90%] max-w-[1100px] mx-auto py-14 md:py-20">
+
+        <div class="flex flex-col items-center text-center">
+
+            <img
+                src="img/github_profile_under_1mb.jpg"
+                alt="Poria Rezaee"
+                class="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover border border-white/10 shadow-[0_15px_50px_rgba(0,0,0,0.5)]"
+            >
+
+            <h2 class="text-2xl md:text-3xl font-semibold mt-7">
+                Poria Rezaee
+            </h2>
+
+            <p class="text-sm text-white/40 mt-2">
+                Front-End Developer
+            </p>
+
+            <p class="text-sm text-white/30 mt-6 max-w-md leading-6">
+                A simple movie carousel built with HTML, Tailwind CSS and Vanilla JavaScript.
+            </p>
+
+            <div class="flex flex-wrap justify-center items-center gap-6 mt-8 text-sm text-white/50">
+
+                <a
+                    href="https://t.me/pori_07"
+                    target="_blank"
+                    class="hover:text-white transition-colors duration-200"
+                >
+                    Telegram
+                </a>
+
+                <a
+                    href="https://instagram.com/poria.frontend"
+                    target="_blank"
+                    class="hover:text-white transition-colors duration-200"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    href="https://github.com/poria-dev"
+                    target="_blank"
+                    class="hover:text-white transition-colors duration-200"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://linkedin.com/in/pooria-rezaee"
+                    target="_blank"
+                    class="hover:text-white transition-colors duration-200"
+                >
+                    LinkedIn
+                </a>
+
             </div>
 
-            <div class="absolute w-[55%] h-[25%] left-[22.5%] top-[38%] rounded-full pointer-events-none
-                bg-[radial-gradient(ellipse,rgba(255,255,255,0.035),transparent_70%)]
-                blur-[70px]">
-            </div>
+        </div>
 
-    <div class="w-[10%] h-full shrink-0 flex justify-center items-center max-md:w-[12%] max-sm:w-[14%]">
+        <div class="border-t border-white/10 mt-14 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
 
-        <button class="btnleft group w-[70%] max-w-[80px] p-4 rounded-2xl cursor-pointer flex justify-center items-center text-white/70 bg-white/[0.04] border border-white/10 backdrop-blur-xl shadow-[0_20px_45px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:text-white hover:bg-white/[0.09] hover:border-white/20 hover:-translate-x-1 active:scale-95 max-md:w-[75%] max-md:p-3 max-sm:w-full max-sm:p-2 max-sm:rounded-xl" type="button">
+            <p class="text-xs text-white/30">
+                © 2026 Poria Dev
+            </p>
 
-            <svg class="w-[52px] h-[52px] transition-transform duration-300 group-hover:-translate-x-1 max-md:w-[38px] max-md:h-[38px] max-sm:w-[27px] max-sm:h-[27px]" viewBox="0 0 32 32" fill="none">
-                <path d="M28 16H6" stroke="currentColor" stroke-width="2"/>
-                <path d="M14 7L5 16L14 25" stroke="currentColor" stroke-width="2"/>
-                <path d="M9 7L4 12" stroke="currentColor" stroke-width="1" opacity=".35"/>
-            </svg>
+            <p class="text-xs text-white/30">
+                HTML · Tailwind CSS · JavaScript
+            </p>
 
-        </button>
+        </div>
 
     </div>
 
-    <div class="boxorg w-[80%] h-[650px] shrink-0 relative [perspective:1000px] isolate max-md:w-[76%] max-md:h-[520px] max-sm:w-[72%] max-sm:h-[430px]">
-
-        <div class="absolute w-[70%] h-[55%] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none -z-10 bg-[radial-gradient(ellipse,rgba(255,69,0,0.16),rgba(255,69,0,0.04)_45%,transparent_72%)] blur-[45px]"></div>
-
-        <figure data-status="0" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
-            <img class="absolute inset-0 w-full h-full object-cover" src="img/thor-ragnarok.jpg" alt="Thor Ragnarok">
-            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
-                <h2 class="text-xl font-bold text-white max-sm:text-sm">Thor: Ragnarok</h2>
-                <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">Thor must stop Ragnarok and face a powerful new enemy.</p>
-            </div>
-        </figure>
-
-        <figure data-status="1" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
-            <img class="absolute inset-0 w-full h-full object-cover" src="img/eternals.jpg" alt="Eternals">
-            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
-                <h2 class="text-xl font-bold text-white max-sm:text-sm">Eternals</h2>
-                <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">Ancient cosmic heroes return to protect humanity.</p>
-            </div>
-        </figure>
-
-        <figure data-status="2" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
-            <img class="absolute inset-0 w-full h-full object-cover" src="img/guardians-of-the-galaxy.jpg" alt="Guardians of the Galaxy">
-            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
-                <h2 class="text-xl font-bold text-white max-sm:text-sm">Guardians of the Galaxy</h2>
-                <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">A group of unlikely heroes joins forces across the galaxy.</p>
-            </div>
-        </figure>
-
-        <figure data-status="3" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_45px_90px_rgba(0,0,0,0.7),0_20px_45px_rgba(0,0,0,0.45),0_0_55px_rgba(255,69,0,0.08)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
-            <img class="absolute inset-0 w-full h-full object-cover" src="img/justice-league.jpg" alt="Justice League">
-            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
-                <h2 class="text-xl font-bold text-white max-sm:text-sm">Justice League</h2>
-                <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">Earth's greatest heroes unite against an unstoppable threat.</p>
-            </div>
-        </figure>
-
-        <figure data-status="4" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
-            <img class="absolute inset-0 w-full h-full object-cover" src="img/spider-man.jpg" alt="Spider-Man">
-            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
-                <h2 class="text-xl font-bold text-white max-sm:text-sm">Spider-Man</h2>
-                <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">A young hero learns what it truly means to be responsible.</p>
-            </div>
-        </figure>
-
-        <figure data-status="5" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
-            <img class="absolute inset-0 w-full h-full object-cover" src="img/dr-strange.jpg" alt="Doctor Strange">
-            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
-                <h2 class="text-xl font-bold text-white max-sm:text-sm">Doctor Strange</h2>
-                <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">A brilliant surgeon enters a world of magic and mysticism.</p>
-            </div>
-        </figure>
-
-        <figure data-status="6" class="absolute w-[30%] h-[72%] rounded-2xl overflow-hidden duration-500 ease-out shadow-[0_30px_60px_rgba(0,0,0,0.55),0_12px_25px_rgba(0,0,0,0.3)] border border-white/10 max-md:w-[40%] max-md:h-[65%] max-sm:w-[52%] max-sm:h-[60%]">
-            <img class="absolute inset-0 w-full h-full object-cover" src="img/suicide-squad.jpg" alt="Suicide Squad">
-            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 bg-gradient-to-t from-black/95 via-black/60 to-transparent max-sm:p-3 max-sm:pt-16">
-                <h2 class="text-xl font-bold text-white max-sm:text-sm">Suicide Squad</h2>
-                <p class="mt-1 text-sm leading-relaxed text-white/70 max-sm:text-[10px]">A team of dangerous criminals is sent on an impossible mission.</p>
-            </div>
-        </figure>
-
-    </div>
-
-    <div class="w-[10%] h-full shrink-0 flex justify-center items-center max-md:w-[12%] max-sm:w-[14%]">
-
-        <button class="btnright group w-[70%] max-w-[80px] p-4 rounded-2xl cursor-pointer flex justify-center items-center text-white/70 bg-white/[0.04] border border-white/10 backdrop-blur-xl shadow-[0_20px_45px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:text-white hover:bg-white/[0.09] hover:border-white/20 hover:translate-x-1 active:scale-95 max-md:w-[75%] max-md:p-3 max-sm:w-full max-sm:p-2 max-sm:rounded-xl" type="button">
-
-            <svg class="w-[52px] h-[52px] transition-transform duration-300 group-hover:translate-x-1 max-md:w-[38px] max-md:h-[38px] max-sm:w-[27px] max-sm:h-[27px]" viewBox="0 0 32 32" fill="none">
-                <path d="M4 16H26" stroke="currentColor" stroke-width="2"/>
-                <path d="M18 7L27 16L18 25" stroke="currentColor" stroke-width="2"/>
-                <path d="M23 7L28 12" stroke="currentColor" stroke-width="1" opacity=".35"/>
-            </svg>
-
-        </button>
-
-    </div>
+</footer>
 
 
-    <ul class="w-full h-25  *:rounded-full flex justify-center items-center gap-2.5 *:bg-gray-500 *:w-5 *:h-5">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-
-</section>
-
-<script src="slider.js"></script>
+    <script src="slider.js"></script>
 
 </body>
+
 </html>
