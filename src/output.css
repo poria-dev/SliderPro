@@ -679,6 +679,9 @@
   :is(.\*\:w-5 > *) {
     width: calc(var(--spacing) * 5);
   }
+  :is(.\*\:cursor-pointer > *) {
+    cursor: pointer;
+  }
   :is(.\*\:rounded-full > *) {
     border-radius: calc(infinity * 1px);
   }
